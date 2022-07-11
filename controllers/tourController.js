@@ -55,9 +55,7 @@ exports.getTour = async (req, res) => {
 
 exports.createTour = async (req, res) => {
   try {
-    // const newTour = new Tour({})
-    // newTour.save()
-
+    // pass the data that we want to store in the db as a new tour
     const newTour = await Tour.create(req.body);
 
     res.status(201).json({
